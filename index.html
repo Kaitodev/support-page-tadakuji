@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="タダくじ - 無料宝くじシミュレーターアプリのサポートページ。利用規約、プライバシーポリシー、よくある質問を掲載。">
+    <title>タダくじ - サポート</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #FF0000 0%, #E69900 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        nav {
+            background: #f8f9fa;
+            padding: 0;
+            border-bottom: 1px solid #e0e0e0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 15px 25px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: all 0.3s;
+            border-bottom: 3px solid transparent;
+        }
+
+        nav ul li a:hover {
+            background: #e9ecef;
+            color: #FF0000;
+            border-bottom-color: #FF0000;
+        }
+
+        .content {
+            padding: 40px 30px;
+        }
+
+        section {
+            margin-bottom: 60px;
+            scroll-margin-top: 70px;
+        }
+
+        section:last-child {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            font-size: 2em;
+            color: #FF0000;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #FF0000;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            color: #333;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 5px solid #E69900;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .feature-box {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 5px solid #E69900;
+        }
+
+        .feature-box h4 {
+            color: #FF0000;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .contact-info h3 {
+            color: white;
+            border: none;
+            padding: 0;
+            margin-bottom: 15px;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #FF0000 0%, #E69900 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 0, 0, 0.4);
+        }
+
+        .app-store-badge {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .faq-item {
+            background: #f8f9fa;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border-left: 5px solid #667eea;
+        }
+
+        .faq-item h4 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .faq-item p {
+            color: #666;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 0;
+        }
+
+        footer p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: #E69900;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            color: #856404;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        .info {
+            background: #d1ecf1;
+            border: 1px solid #17a2b8;
+            color: #0c5460;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            header h1 {
+                font-size: 2em;
+            }
+
+            .content {
+                padding: 20px 15px;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li a {
+                padding: 12px 15px;
+            }
+
+            h2 {
+                font-size: 1.6em;
+            }
+
+            h3 {
+                font-size: 1.3em;
+            }
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #FF0000 0%, #E69900 100%);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 24px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>タダくじ</h1>
+            <p>お金を使わずに宝くじ体験</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#about">アプリについて</a></li>
+                <li><a href="#features">機能紹介</a></li>
+                <li><a href="#faq">よくある質問</a></li>
+                <li><a href="#terms">利用規約</a></li>
+                <li><a href="#privacy">プライバシーポリシー</a></li>
+                <li><a href="#contact">お問い合わせ</a></li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <!-- アプリについて -->
+            <section id="about">
+                <h2>アプリについて</h2>
+                <p>
+                    「タダくじ」は、お金を使わずに宝くじの購入・開封体験ができる完全無料のシミュレーターアプリです。
+                    実際の宝くじと同じ当選確率を再現し、リアルな「宝くじの夢と現実」を体験できます。
+                </p>
+
+                <div class="info">
+                    <strong>📱 完全無料 × 🎯 リアル確率 × 🎉 無限に遊べる</strong>
+                </div>
+
+                <p>
+                    「宝くじって本当に当たるの？」「10,000枚買ったらどうなる？」<br>
+                    そんな疑問をお金を使わずに体験できます。何度でも無料で遊べるから、運試しに最適です。
+                </p>
+
+                <div class="app-store-badge">
+                    <a href="#" class="btn">App Storeでダウンロード</a>
+                </div>
+            </section>
+
+            <!-- 機能紹介 -->
+            <section id="features">
+                <h2>機能紹介</h2>
+
+                <div class="feature-box">
+                    <h4>🎫 1枚〜10,000枚まで自由に選択</h4>
+                    <p>好きな枚数を選んでシミュレーション。1枚でも10,000枚でも、あなた次第！</p>
+                </div>
+
+                <div class="feature-box">
+                    <h4>🎯 リアルな当選確率を完全再現</h4>
+                    <p>実際の宝くじデータに基づいた正確な確率設定。1等から7等まで7段階の賞金を用意。</p>
+                    <ul>
+                        <li>1等：7億円（確率：1/20,000,000）</li>
+                        <li>2等：1,500万円（確率：1/6,666,667）</li>
+                        <li>3等：100万円（確率：1/666,667）</li>
+                        <li>4等：5万円（確率：1/10,000）</li>
+                        <li>5等：1万円（確率：1/1,000）</li>
+                        <li>6等：3,000円（確率：1/100）</li>
+                        <li>7等：300円（確率：1/10）</li>
+                    </ul>
+                </div>
+
+                <div class="feature-box">
+                    <h4>📊 累計データで収支を確認</h4>
+                    <p>これまでの購入枚数と当選金額、収支を自動で記録。夢と現実が一目で分かります。</p>
+                </div>
+
+                <div class="feature-box">
+                    <h4>📜 詳細な履歴機能</h4>
+                    <p>過去のシミュレーション結果をすべて保存。いつでも振り返ることができます。</p>
+                </div>
+
+                <div class="feature-box">
+                    <h4>📤 SNSシェア機能</h4>
+                    <p>高額当選が出たら、すぐにSNSでシェア！友達に自慢しよう。</p>
+                </div>
+
+                <div class="feature-box">
+                    <h4>🎊 1等当選時の盛大なエフェクト</h4>
+                    <p>1等が当たったら、画面いっぱいに紙吹雪が舞い、豪華な演出で祝福します！</p>
+                </div>
+            </section>
+
+            <!-- よくある質問 -->
+            <section id="faq">
+                <h2>よくある質問</h2>
+
+                <div class="faq-item">
+                    <h4>Q. 本当に無料ですか？</h4>
+                    <p>A. はい、完全無料です。アプリのダウンロードも利用も、一切お金はかかりません。広告が表示されますが、これにより無料で提供しています。</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Q. 本当に当選しますか？</h4>
+                    <p>A. 本アプリはシミュレーターです。実際にお金がもらえるわけではありませんが、リアルな当選確率で「当選体験」を楽しめます。</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Q. 個人情報は収集されますか？</h4>
+                    <p>A. いいえ、個人情報は一切収集しません。データはすべてお使いの端末内に保存され、外部に送信されることはありません。</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Q. 課金要素はありますか？</h4>
+                    <p>A. 現在、課金要素はありません。将来的に広告非表示などの機能を追加する可能性はありますが、基本機能は永久無料です。</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Q. データのリセットはできますか？</h4>
+                    <p>A. はい、設定画面の履歴から「すべて削除」を選択することで、累計データをリセットできます。</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Q. 確率は本当に正確ですか？</h4>
+                    <p>A. 実際の宝くじのデータを参考に設定していますが、完全に同一ではありません。あくまでシミュレーション目的の確率設定です。</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Q. 1等が全然当たりません</h4>
+                    <p>A. 1等の確率は1/20,000,000（2000万分の1）です。これは実際の宝くじと同じ厳しい確率です。何度も挑戦してみてください！</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Q. 対応機種を教えてください</h4>
+                    <p>A. iOS 17.0以降を搭載したiPhoneで動作します。iPadには対応していません。</p>
+                </div>
+            </section>
+
+            <!-- 利用規約 -->
+            <section id="terms">
+                <h2>利用規約</h2>
+
+                <p>
+                    Kaito Miura（以下、「当方」といいます）が提供するアプリ「タダくじ」（以下、「本アプリ」といいます）の利用規約を以下に定めます。
+                    本アプリを利用する場合、本規約に同意したものとします。本アプリを利用する前に、必ず本規約をお読みください。
+                </p>
+
+                <h3>1. 利用規約の変更</h3>
+                <p>
+                    当方は、利用者の事前の了承を得ることなく、本規約を改定することができ、利用者はそれを承諾するものとします。
+                    改定後の利用規約は、本アプリに掲示された時点より効力を発するものとします。
+                </p>
+
+                <h3>2. プライバシーポリシー</h3>
+                <p>
+                    当方は、利用者の個人情報をプライバシーポリシーに基づき、適切に取り扱います。
+                </p>
+
+                <h3>3. 禁止事項</h3>
+                <p>利用者は、本アプリの利用にあたり、以下の行為を行ってはならないこととします。</p>
+                <ul>
+                    <li>著作権、肖像権、名誉権、プライバシー等を侵害する行為</li>
+                    <li>当方または第三者の著作権、その他の知的財産権または財産的利益を侵害する行為、またはそのおそれのある行為</li>
+                    <li>法令もしくは公序良俗に反する行為、またはそのおそれのある行為</li>
+                    <li>他の利用者または第三者に不利益を与える行為、またはそのおそれのある行為</li>
+                    <li>本アプリの運用を妨げる行為、またはそのおそれのある行為</li>
+                    <li>当方または本アプリの信用を毀損する行為、またはそのおそれのある行為</li>
+                    <li>本アプリに含まれるソフトウェア情報および著作物について、リバースエンジニアリング、逆コンパイル、または逆アセンブルする行為</li>
+                    <li>当方のネットワークおよび本アプリを提供するにあたり使用しているインターネットサーバ（以下「対象設備」）に不正にアクセスし、または蓄積された情報を不正に書き換えもしくは消去する行為</li>
+                    <li>対象設備にウイルス等の有害なコンピュータプログラム等を送信する行為</li>
+                    <li>対象設備に必要以上の負荷をかける行為</li>
+                    <li>その他、当方が不適切と判断する行為</li>
+                </ul>
+
+                <h3>4. 免責事項</h3>
+                <p>
+                    利用者が本アプリを利用して生じた損害について、当方は責任を一切負わないものとします。
+                </p>
+
+                <h3>5. 本アプリの変更・一時停止・終了</h3>
+                <p>
+                    当方は、本アプリの一部または全部を、利用者へ事前に通知することなく、いつでも任意の理由で変更・一時停止・終了することができるものとします。
+                </p>
+
+                <h3>6. 広告の掲載について</h3>
+                <p>
+                    利用者は、本アプリ上にあらゆる広告が含まれる場合があること、当方またはその提携先があらゆる広告を掲載する場合があることを理解しこれを承諾したものとみなします。
+                    本サービス上の広告の形態や範囲は、当方によって随時変更されます。
+                </p>
+
+                <h3>7. 有料コンテンツ</h3>
+                <p>
+                    本アプリ内の一部については、対価を支払うことにより有料コンテンツを購入することができます。
+                    当方は、本アプリにおいて無償または有料とされているコンテンツについて、当方の裁量でその価格を変更することがあります。
+                </p>
+
+                <h3>8. 準拠法</h3>
+                <p>
+                    本規約の有効性、解釈及び履行については、日本法に準拠し、日本法に従って解釈されるものとします。
+                </p>
+
+                <p style="text-align: right; margin-top: 30px;">
+                    <strong>2025年10月19日　施行</strong>
+                </p>
+            </section>
+
+            <!-- プライバシーポリシー -->
+            <section id="privacy">
+                <h2>プライバシーポリシー</h2>
+
+                <p>
+                    本プライバシーポリシーは、Kaito Miura（以下「当方」という）が提供するアプリ『タダくじ』（以下「本アプリ」という)において、
+                    本アプリを利用されるお客様（以下「お客様」という）の個人情報もしくはそれに準ずる情報を取り扱う際に、本アプリが遵守する方針を示したものです。
+                </p>
+
+                <h3>1. 取得する個人情報と利用目的</h3>
+                <p>
+                    本アプリは、利用者の個人情報（宝くじシミュレーションに関する情報)を、本アプリ内でのデータ保存のみに利用します。
+                </p>
+
+                <div class="info">
+                    <strong>✅ 個人を特定できる情報は一切収集しません</strong><br>
+                    お名前、メールアドレス、電話番号、位置情報など、個人を特定できる情報は取得していません。
+                </div>
+
+                <h3>2. 免責事項</h3>
+                <p>
+                    本アプリがユーザーの特定の目的に適合すること、期待する機能・商品的価値・正確性・有用性を有すること、および不具合が生じないことについて、何ら保証するものではありません。
+                    当方の都合によりアプリの仕様を変更できます。私たちは、当アプリの提供の終了、変更、または利用不能、当アプリの利用によるデータの消失または機械の故障もしくは損傷、
+                    その他当アプリに関してユーザーが被った損害につき、賠償する責任を一切負わないものとします。
+                </p>
+
+                <h3>3. 広告について</h3>
+                <p>
+                    本アプリでは、Google AdMobを利用して広告を表示しています。広告配信のため、以下の情報が広告配信事業者に送信される場合があります：
+                </p>
+                <ul>
+                    <li>広告識別子（IDFA）</li>
+                    <li>IPアドレス</li>
+                    <li>デバイス情報</li>
+                </ul>
+                <p>
+                    これらの情報は、お客様に適切な広告を表示するために使用されます。詳しくは、
+                    <a href="https://policies.google.com/technologies/ads?hl=ja" target="_blank">Googleの広告ポリシー</a>をご確認ください。
+                </p>
+
+                <h3>4. データの保存</h3>
+                <p>
+                    シミュレーション結果、購入履歴、累計データなどは、すべてお客様の端末内にのみ保存されます。
+                    当方のサーバーや外部サービスに送信されることはありません。
+                </p>
+
+                <h3>5. 制定日・改定日</h3>
+                <p style="text-align: right; margin-top: 30px;">
+                    <strong>2025年10月19日　制定</strong>
+                </p>
+            </section>
+
+            <!-- お問い合わせ -->
+            <section id="contact">
+                <h2>お問い合わせ</h2>
+
+                <p>
+                    アプリに関するご質問、ご要望、不具合報告などがございましたら、以下の方法でお問い合わせください。
+                </p>
+
+                <div class="contact-info">
+                    <h3>📧 メールでのお問い合わせ</h3>
+                    <p>
+                        <a href="mailto:support@tadakuji.example.com">support@tadakuji.example.com</a>
+                    </p>
+                    <p style="margin-top: 15px; font-size: 0.9em;">
+                        ※ お問い合わせの際は、アプリのバージョン、端末の種類、OSバージョン、不具合の内容などを記載していただけるとスムーズです。
+                    </p>
+                </div>
+
+                <div class="warning">
+                    <strong>⚠️ 注意事項</strong><br>
+                    本アプリはシミュレーターです。実際の宝くじの当選や換金に関するお問い合わせには対応できません。
+                </div>
+
+                <h3>お問い合わせ時にご記載いただきたい情報</h3>
+                <ul>
+                    <li>アプリのバージョン（設定画面で確認できます）</li>
+                    <li>お使いの端末（例：iPhone 15 Pro）</li>
+                    <li>iOSのバージョン（例：iOS 17.2）</li>
+                    <li>不具合の内容や再現手順</li>
+                    <li>スクリーンショット（可能であれば）</li>
+                </ul>
+            </section>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Kaito Miura. All rights reserved.</p>
+            <p>タダくじ - 無料宝くじシミュレーター</p>
+            <p>
+                <a href="#about">アプリについて</a> |
+                <a href="#terms">利用規約</a> |
+                <a href="#privacy">プライバシーポリシー</a> |
+                <a href="#contact">お問い合わせ</a>
+            </p>
+        </footer>
+    </div>
+
+    <a href="#" class="back-to-top" title="ページトップへ">↑</a>
+
+    <script>
+        // スムーススクロール
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // トップへ戻るボタンの表示/非表示
+        const backToTop = document.querySelector('.back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.style.display = 'flex';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        });
+        backToTop.style.display = 'none';
+    </script>
+</body>
+</html>
